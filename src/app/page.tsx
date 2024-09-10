@@ -1,9 +1,9 @@
 "use client"
 
-import Image from "next/image";
 import AppAuth from '../controler/authApp'
 import createUser from "@/controler/sqlite-controler/create-user";
 import connectDb from "@/controler/autentication";
+import { connect } from "http2";
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
@@ -11,7 +11,6 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { useRouter } from "next/navigation";
 import { z } from "zod"
-import { connect } from "http2";
 
 const formSchema = z.object({
   login: z.string().min(2, {
@@ -71,7 +70,7 @@ export default function Login() {
               <FormItem>
                 <FormLabel>Senha</FormLabel>
                 <FormControl>
-                  <Input placeholder="Senha" className="senha" {...field} />
+                  <Input type='password' placeholder="Senha" className="senha" {...field} />
                 </FormControl>
                 <FormDescription>
                 </FormDescription>

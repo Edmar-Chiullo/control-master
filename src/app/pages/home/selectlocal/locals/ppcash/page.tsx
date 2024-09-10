@@ -1,36 +1,69 @@
 'use client'
+
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import { useRouter } from "next/navigation"
+import { useStackLabelContext } from "@/app/context/userContext"
+import Image from "next/image"
 
-export default function PpVarejo() {
+const InsertLocalItemStackLabel = () => {
     const router = useRouter()
-    const ruasLocals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    const { stackLabel, setStackLabel } = useStackLabelContext();
 
-    const addLeftZero = (value: number) => {
-        const addZero = value <= 9 ? `0${value}` : value 
-        
-        return addZero
+    const defaultLocals = {
+        pp1046: 'PP 1046',
+        bl1046: 'BL 1046',
+        pp1125: 'PP 1125',
+        bl1125: 'BL 1125'
     }
 
-    const backReadEt = () => {
-        router.push('/pages/home/readet')
+    const locals = (element: any) => {
+        const local = element.target.innerText
+        switch (local) {
+            case defaultLocals.pp1046:
+                stackLabel.pushLocal(element.target.innerText)
+                setStackLabel(stackLabel)
+                router.push('/pages/home/selectlocal/locals/ppvarejo')
+                break;
+            case defaultLocals.bl1046:
+                stackLabel.pushLocal(element.target.innerText)
+                setStackLabel(stackLabel)
+                stackLabel.pushStreet('No street')
+                router.push('/pages/home/readet')
+                break;
+            case defaultLocals.pp1125:
+                stackLabel.pushLocal(element.target.innerText)
+                setStackLabel(stackLabel)
+                router.push('/pages/home/selectlocal/locals/ppcash')
+                break;
+            case defaultLocals.bl1125:
+                stackLabel.pushLocal(element.target.innerText)
+                setStackLabel(stackLabel)
+                stackLabel.pushStreet('No street')
+                router.push('/pages/home/readet')
+                break;
+            default:
+                break;
+        }
     }
 
     return (
-        <div className="relative grid grid-cols-4 grid-rows-6 justify-items-center items-center p-3 space-x-0 w-full h-full">
+        <div className="relative w-full h-full">
             <Image
-                width={48}
-                height={48}
+                width={36}
+                height={36}
                 src={'/seta.png'}
                 alt="Botão seta para esquerda (retornar a pagina)"
-                className="absolute ml-1 top-[-250px] left-0"
-                onClick={() => router.push('/pages/home/selectlocal')} 
+                className="absolute ml-1 top-[-250px]"
+                onClick={() => router.push('/pages/home/readet')}
             />
-            {ruasLocals.map((value) => {
-                const num = addLeftZero(value)
-                return <Button key={num} onClick={backReadEt} className="w-14 h-12 bg-[#f8fafc] text-[bg-primary] font-bold text-lg">{num}</Button> 
-            })} 
+            <div className="flex flex-col justify-center items-center space-y-8 w-full h-full">
+                <Button className="w-[85%] bg-[#f8fafc] text-[bg-primary] text-lg font-bold" onClick={locals}>PP 1046</Button>
+                <Button className="w-[85%] bg-[#f8fafc] text-[bg-primary] text-lg font-bold" onClick={locals}>BL 1046</Button>
+                <Button className="w-[85%] bg-[#f8fafc] text-[bg-primary] text-lg font-bold" onClick={locals}>PP 1125</Button>
+                <Button className="w-[85%] bg-[#f8fafc] text-[bg-primary] text-lg font-bold" onClick={locals}>BL 1125</Button>
+            </div>
         </div>
-    ) 
+    )
 }
+
+export default InsertLocalItemStackLabel
