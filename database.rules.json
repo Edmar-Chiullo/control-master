@@ -1,0 +1,6 @@
+{
+  "rules": {
+    ".read": "auth.token != auth.token",
+    ".write": "auth.token != auth.token"
+  }
+}

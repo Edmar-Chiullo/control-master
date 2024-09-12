@@ -24,6 +24,7 @@
     "rewrites": [
       {
         "source": "**",
+<<<<<<< HEAD
         "function": "nextApp"
       }
     ]
@@ -45,4 +46,10 @@
       ]
     }
   ]
+=======
+        "destination": "/index.html"
+      }
+    ]
+  }
+>>>>>>> origin
 }
