@@ -1,7 +1,11 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/pages/home/selectlocal/locals/ppcash/page": "app/pages/home/selectlocal/locals/ppcash/page.js",
+  "/pages/home/readet/page": "app/pages/home/readet/page.js",
   "/pages/home/page": "app/pages/home/page.js",
   "/pages/home/selectlocal/page": "app/pages/home/selectlocal/page.js",
-  "/pages/home/readet/page": "app/pages/home/readet/page.js",
+  "/pages/home/selectlocal/locals/blvarejo/page": "app/pages/home/selectlocal/locals/blvarejo/page.js",
   "/pages/home/selectlocal/locals/ppvarejo/page": "app/pages/home/selectlocal/locals/ppvarejo/page.js"
 }
