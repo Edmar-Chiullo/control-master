@@ -1,4 +1,3 @@
-import { string } from "zod"
 
 class StackLabel {
     operadorName: string
@@ -38,14 +37,6 @@ class StackLabel {
         this.count++
     }
     
-    // pop() {
-    //     if (this.isEmpty()) return undefined
-    //     this.count--
-    //     const result = this.item[this.count]
-    //     delete this.item[this.count]
-    //     return result
-    // }
-
     isEmpty() {
         return this.count === 0
     }
