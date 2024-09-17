@@ -1,8 +1,7 @@
 "use client"
 
 import AppAuth from '../controler/authApp'
-import createUser from "@/controler/sqlite-controler/create-user";
-import connectDb from "@/controler/autentication";
+import { useStackLabelContext } from "@/app/context/userContext"
 import queryUser from '@/controler/sqlite-controler/query-user';
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -26,6 +25,7 @@ const formSchema = z.object({
 export default function Login() {
   const router = useRouter()
   const [alertMessage, setAlertMessage] = useState(false)
+  const { stackLabel, setStackLabel} = useStackLabelContext()
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -45,10 +45,10 @@ export default function Login() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     //createUser(values)
-    //connectDb()
     queryUser(values).then(user => {
-      console.log(user)
-      if (user) {
+      if (user) { //user é um valor boleano.
+        const stack = stackLabel.operadorName = values.login
+        setStackLabel(stackLabel)
         router.push('/pages/home')
       } else {
         setAlertMessage(true)

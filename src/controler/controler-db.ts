@@ -1,4 +1,5 @@
 import { getDatabase, ref, set, push } from "firebase/database";
+import { StackProps } from "@/lib/interfaces";
 import app from "./app-key";
 
 interface PlProps {
@@ -6,13 +7,12 @@ interface PlProps {
   Local_Entrega: string
 }
 
-export default function writeUserData(pl:PlProps) {
+export default function writeUserData(data:StackProps) {
     const database = getDatabase(app);
-    const postListRef = ref(database, 'users');
+    const postListRef = ref(database, 'masters');
     const newPostRef = push(postListRef);
 
     set(newPostRef, {
-      Et_Number: pl.Et_Number,
-      Local_Entrega: pl.Local_Entrega
+      data: data
     });
   }

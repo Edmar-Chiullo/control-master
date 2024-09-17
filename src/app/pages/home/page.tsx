@@ -2,15 +2,13 @@
 
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
-import { useStackLabelContext } from "@/app/context/userContext"
+import connectDb from "@/controler/autentication"
 
 const Home = () => {
     const router = useRouter()
-    const { stackLabel, setStackLabel} = useStackLabelContext()
 
     const constructorStack = () => {
-        const stack = stackLabel.operadorName = 'Edmar'
-        setStackLabel(stackLabel)
+        connectDb() // Execução de conexão com o o app.
         router.push('/pages/home/readet')
     };
 

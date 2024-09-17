@@ -6,6 +6,7 @@ const firebaseConfig = {
   authDomain: "cotroler-master.firebaseapp.com",
   projectId: "cotroler-master",
   databaseURL: "https://cotroler-master-default-rtdb.firebaseio.com",
+  //databaseURL: "http://127.0.0.1:9000/?ns=cotroler-master-default-rtdb",
   storageBucket: "cotroler-master.appspot.com",
   messagingSenderId: "850929693705",
   appId: "1:850929693705:web:a1017aab3ad462d61834d8"

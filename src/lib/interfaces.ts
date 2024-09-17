@@ -3,7 +3,9 @@ export interface StackProps {
     operadorName: string
     date: Date
     count: number
-    items: any
+    countItem: number
+    item: Record<number, object>
+    subItem: Record<number, string>
 }
 
 export interface UserLogin {

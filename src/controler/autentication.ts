@@ -1,7 +1,5 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from "./app-key";
-import { strict } from "assert";
-import { string } from "zod";
 
 const usuario = {
     email: 'mft6254@gmail.com',
