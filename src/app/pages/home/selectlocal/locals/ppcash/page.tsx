@@ -15,6 +15,9 @@ const InsertStreetItemStackLabel = () => {
         return addZero
     }
 
+    //coments
+    
+
     const pushStreet = (element: any) => {
         stackLabel.pushLocal(element.target.innerText)
         setStackLabel(stackLabel)
