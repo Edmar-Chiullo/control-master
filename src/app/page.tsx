@@ -3,13 +3,15 @@
 import AppAuth from '../controler/authApp'
 import createUser from "@/controler/sqlite-controler/create-user";
 import connectDb from "@/controler/autentication";
-import { connect } from "http2";
+import queryUser from '@/controler/sqlite-controler/query-user';
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { useRouter } from "next/navigation";
+import { useState } from 'react';
 import { z } from "zod"
 
 const formSchema = z.object({
@@ -23,6 +25,7 @@ const formSchema = z.object({
 
 export default function Login() {
   const router = useRouter()
+  const [alertMessage, setAlertMessage] = useState(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -32,12 +35,30 @@ export default function Login() {
     },
   })
 
+  const showAlert = () => {
+    setTimeout(() => {
+      setAlertMessage(false)
+      console.log('Alert')
+    }, 2000);
+    
+  }
+
   function onSubmit(values: z.infer<typeof formSchema>) {
     //createUser(values)
     //connectDb()
-    router.push('/pages/home')
+    queryUser(values).then(user => {
+      console.log(user)
+      if (user) {
+        router.push('/pages/home')
+      } else {
+        setAlertMessage(true)
+        showAlert()
+      }
+    })
+    
+
     form.reset({
-      login: '',
+      login: '',  
       senha: ''
     })
 
@@ -80,6 +101,14 @@ export default function Login() {
           />
           <Button type="submit" className="w-full">Entrar</Button>
         </form>
+        { alertMessage &&
+          <Alert className='w-96'>
+            <AlertTitle className='text-[red]'>Erro!</AlertTitle>
+            <AlertDescription className='text-[red]'>
+              Usuário não encontrado.
+            </AlertDescription>
+          </Alert>
+        }
       </Form>
     </div>  
   );

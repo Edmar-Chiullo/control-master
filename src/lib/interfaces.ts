@@ -5,3 +5,8 @@ export interface StackProps {
     count: number
     items: any
 }
+
+export interface UserLogin {
+    login: string
+    senha: string
+}

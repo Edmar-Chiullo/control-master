@@ -1,5 +1,7 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from "./app-key";
+import { strict } from "assert";
+import { string } from "zod";
 
 const usuario = {
     email: 'mft6254@gmail.com',
@@ -19,7 +21,7 @@ function connectDb() {
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    console.log(`${errorCode.email} ${errorMessage.email} logado com sussesso!`)
+    console.log(`${errorCode.email} ${errorMessage.email} Não foi possivel realizar o login!`)
 
   });
 }

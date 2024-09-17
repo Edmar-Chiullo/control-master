@@ -1,0 +1,106 @@
+[debug] [2024-09-13T14:33:02.233Z] ----------------------------------------------------------------------
+[debug] [2024-09-13T14:33:02.235Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\liteidtech\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2024-09-13T14:33:02.236Z] CLI Version:   13.17.0
+[debug] [2024-09-13T14:33:02.236Z] Platform:      win32
+[debug] [2024-09-13T14:33:02.236Z] Node Version:  v20.11.1
+[debug] [2024-09-13T14:33:02.236Z] Time:          Fri Sep 13 2024 11:33:02 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2024-09-13T14:33:02.236Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-13T14:33:02.307Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-13T14:33:02.307Z] > authorizing via signed-in user (mft6254@gmail.com)
+[debug] [2024-09-13T14:33:02.465Z] java version "22.0.1" 2024-04-16
+Java(TM) SE Runtime Environment (build 22.0.1+8-16)
+
+[debug] [2024-09-13T14:33:02.466Z] Java HotSpot(TM) 64-Bit Server VM (build 22.0.1+8-16, mixed mode, sharing)
+
+[debug] [2024-09-13T14:33:02.483Z] Parsed Java major version: 22
+[info] i  emulators: Starting emulators: auth, functions, database, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, database, hosting"}}
+[debug] [2024-09-13T14:33:02.500Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-09-13T14:33:02.500Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-09-13T14:33:02.500Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-09-13T14:33:02.500Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-09-13T14:33:02.500Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-09-13T14:33:02.503Z] [hub] writing locator at C:\Users\LITEID~1\AppData\Local\Temp\hub-cotroler-master.json
+[debug] [2024-09-13T14:33:02.514Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-09-13T14:33:02.514Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-09-13T14:33:02.514Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-09-13T14:33:02.514Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: firestore, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mfirestore, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-09-13T14:33:02.517Z] defaultcredentials: writing to file C:\Users\liteidtech\AppData\Roaming\firebase\mft6254_gmail_com_application_default_credentials.json
+[debug] [2024-09-13T14:33:02.519Z] Setting GAC to C:\Users\liteidtech\AppData\Roaming\firebase\mft6254_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\liteidtech\\AppData\\Roaming\\firebase\\mft6254_gmail_com_application_default_credentials.json"}}
+[debug] [2024-09-13T14:33:02.521Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cotroler-master/adminSdkConfig [none]
+[debug] [2024-09-13T14:33:03.094Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cotroler-master/adminSdkConfig 200
+[debug] [2024-09-13T14:33:03.095Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cotroler-master/adminSdkConfig {"projectId":"cotroler-master","databaseURL":"https://cotroler-master-default-rtdb.firebaseio.com","storageBucket":"cotroler-master.appspot.com"}
+[debug] [2024-09-13T14:33:03.108Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cotroler-master [none]
+[debug] [2024-09-13T14:33:03.441Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cotroler-master 200
+[debug] [2024-09-13T14:33:03.441Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cotroler-master {"projectId":"cotroler-master","projectNumber":"850929693705","displayName":"cotroler-master","name":"projects/cotroler-master","resources":{"hostingSite":"cotroler-master","realtimeDatabaseInstance":"cotroler-master-default-rtdb"},"state":"ACTIVE","etag":"1_06cc6f39-caf6-4b72-abf4-c8e22982ce55"}
+[debug] [2024-09-13T14:33:03.441Z] database rules config:  [{"instance":"cotroler-master-default-rtdb","rules":"C:\\Users\\liteidtech\\Documents\\Projetos-NextJs\\App-Control-Master\\app-controler-master\\database.rules.json"}]
+[debug] [2024-09-13T14:33:03.444Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2024-09-13T14:33:03.444Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-09-13T14:33:03.444Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2024-09-13T14:33:03.444Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\liteidtech\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning","--functions_emulator_host","127.0.0.1","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\liteidtech\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\",\"--functions_emulator_host\",\"127.0.0.1\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2024-09-13T14:33:11.611Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/cotroler-master/sites 
+[debug] [2024-09-13T14:33:13.280Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/cotroler-master/sites 200
+[debug] [2024-09-13T14:33:13.280Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/cotroler-master/sites {"sites":[{"name":"projects/cotroler-master/sites/cotroler-master","defaultUrl":"https://cotroler-master.web.app","appId":"1:850929693705:web:a1017aab3ad462d61834d8","type":"DEFAULT_SITE"}]}
+[debug] [2024-09-13T14:33:13.281Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cotroler-master/webApps/1:850929693705:web:a1017aab3ad462d61834d8/config [none]
+[debug] [2024-09-13T14:33:14.396Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cotroler-master/webApps/1:850929693705:web:a1017aab3ad462d61834d8/config 200
+[debug] [2024-09-13T14:33:14.396Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cotroler-master/webApps/1:850929693705:web:a1017aab3ad462d61834d8/config {"projectId":"cotroler-master","appId":"1:850929693705:web:a1017aab3ad462d61834d8","databaseURL":"https://cotroler-master-default-rtdb.firebaseio.com","storageBucket":"cotroler-master.appspot.com","apiKey":"AIzaSyC2mBusyO_XBJ4703rEML3gzDjqHGFWgq4","authDomain":"cotroler-master.firebaseapp.com","messagingSenderId":"850929693705"}
+[debug] [2024-09-13T14:33:14.402Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cotroler-master [none]
+[debug] [2024-09-13T14:33:14.733Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cotroler-master 200
+[debug] [2024-09-13T14:33:14.733Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cotroler-master {"projectId":"cotroler-master","projectNumber":"850929693705","displayName":"cotroler-master","name":"projects/cotroler-master","resources":{"hostingSite":"cotroler-master","realtimeDatabaseInstance":"cotroler-master-default-rtdb"},"state":"ACTIVE","etag":"1_06cc6f39-caf6-4b72-abf4-c8e22982ce55"}
+[info] i  hosting[cotroler-master]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting[cotroler-master]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2024-09-13T14:33:14.758Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-09-13T14:33:14.758Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-09-13T14:33:14.758Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\liteidtech\\.cache\\firebase\\emulators\\ui-v1.13.0\\server\\server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\liteidtech\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.13.0\\\\server\\\\server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-09-13T14:33:14.912Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-09-13T14:33:14.913Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\liteidtech\Documents\Projetos-NextJs\App-Control-Master\app-controler-master\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\liteidtech\\Documents\\Projetos-NextJs\\App-Control-Master\\app-controler-master\\functions\" for Cloud Functions..."}}
+[error] !!  functions: Failed to load function definition from source: FirebaseError: could not deploy functions because the "functions" directory was not found. Please create it or specify a different source directory in firebase.json {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: could not deploy functions because the \u001b[1m\"functions\"\u001b[22m directory was not found. Please create it or specify a different source directory in firebase.json"}}
+[debug] [2024-09-13T14:33:14.993Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/.settings/rules.json ns=cotroler-master-default-rtdb
+[debug] [2024-09-13T14:33:14.993Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json "{\n  \"rules\": {\n    \".read\": \"auth.token != auth.token\",\n    \".write\": \"auth.token != auth.token\"\n  }\n}"
+[debug] [2024-09-13T14:33:15.544Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/.settings/rules.json 200
+[debug] [2024-09-13T14:33:15.544Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json {"status":"ok"}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Database       │ 127.0.0.1:9000 │ http://127.0.0.1:4000/database  │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Hosting        │ 127.0.0.1:5000 │ n/a                             │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-09-13T14:36:04.656Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast [none]
+[debug] [2024-09-13T14:36:04.657Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast {"eventId":"d8ea5d4b-35dd-4cfa-8772-4f552457adbe","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/cotroler-master","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-09-13T14:36:04.656Z","data":{"uid":"H6pzuP5zXDhVKy8n7cWl0NRyPlX2","email":"ecscchiullo@gmail.com","emailVerified":false,"displayName":"Edmar","photoURL":"","metadata":{"creationTime":"2024-09-13T14:36:04.654Z","lastSignInTime":"2024-09-13T14:36:04.654Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"ecscchiullo@gmail.com","federatedId":"ecscchiullo@gmail.com","rawId":"ecscchiullo@gmail.com","displayName":"Edmar","photoUrl":""}],"mfaInfo":[]}}
+[debug] [2024-09-13T14:36:04.665Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast 200
+[debug] [2024-09-13T14:36:04.665Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-09-13T15:01:32.120Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast [none]
+[debug] [2024-09-13T15:01:32.120Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast {"eventId":"b79672b0-212c-4f10-9da1-cc6a49cdee9d","eventType":"providers/firebase.auth/eventTypes/user.delete","resource":{"name":"projects/cotroler-master","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-09-13T15:01:32.120Z","data":{"uid":"H6pzuP5zXDhVKy8n7cWl0NRyPlX2","email":"ecscchiullo@gmail.com","emailVerified":false,"displayName":"Edmar","photoURL":"","metadata":{"creationTime":"2024-09-13T14:36:04.654Z","lastSignInTime":"2024-09-13T14:36:04.654Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"ecscchiullo@gmail.com","federatedId":"ecscchiullo@gmail.com","rawId":"ecscchiullo@gmail.com","displayName":"Edmar","photoUrl":""}],"mfaInfo":[]}}
+[debug] [2024-09-13T15:01:32.124Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast 200
+[debug] [2024-09-13T15:01:32.124Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-09-13T15:03:39.140Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast [none]
+[debug] [2024-09-13T15:03:39.140Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast {"eventId":"17d2a182-07b1-4603-b28d-8abd7e32f737","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/cotroler-master","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-09-13T15:03:39.139Z","data":{"uid":"weezxI9GVhRYQa3aMJGPOIWVDX4r","email":"ecschiullo@gmail.com","emailVerified":false,"displayName":"Edmar","photoURL":"","metadata":{"creationTime":"2024-09-13T15:03:39.139Z","lastSignInTime":"2024-09-13T15:03:39.139Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"ecschiullo@gmail.com","federatedId":"ecschiullo@gmail.com","rawId":"ecschiullo@gmail.com","displayName":"Edmar","photoUrl":""}],"mfaInfo":[]}}
+[debug] [2024-09-13T15:03:39.144Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast 200
+[debug] [2024-09-13T15:03:39.144Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-09-13T15:05:27.386Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast [none]
+[debug] [2024-09-13T15:05:27.386Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast {"eventId":"cab09a03-4930-42ed-9f49-6a25b15560ac","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/cotroler-master","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-09-13T15:05:27.386Z","data":{"uid":"ahsM83WmYzpEXNUlng434QQtQWyl","email":"mft6254@gmail.com","emailVerified":false,"displayName":"Edmar","photoURL":"","metadata":{"creationTime":"2024-09-13T15:05:27.386Z","lastSignInTime":"2024-09-13T15:05:27.386Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"mft6254@gmail.com","federatedId":"mft6254@gmail.com","rawId":"mft6254@gmail.com","displayName":"Edmar","photoUrl":""}],"mfaInfo":[]}}
+[debug] [2024-09-13T15:05:27.390Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast 200
+[debug] [2024-09-13T15:05:27.390Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/cotroler-master/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-09-13T15:22:12.926Z] Received signal SIGHUP 1
