@@ -47,16 +47,17 @@ export default function Login() {
     //createUser(values)
     queryUser(values).then(user => {
       if (user) { //user é um valor boleano.
+        console.log(user + 'Usuario encontrado.')
         const stack = stackLabel.operadorName = values.login
         setStackLabel(stackLabel)
         router.push('/pages/home')
       } else {
+        console.log(user + 'Usuario não encontrado.')
         setAlertMessage(true)
         showAlert()
       }
     })
     
-
     form.reset({
       login: '',  
       senha: ''
