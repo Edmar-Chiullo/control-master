@@ -1,8 +1,8 @@
 "use client"
 
-import AppAuth from '../controler/authApp'
 import { useStackLabelContext } from "@/app/context/userContext"
 import queryUser from '@/controler/sqlite-controler/query-user';
+import Link from 'next/link';
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
@@ -38,7 +38,6 @@ export default function Login() {
   const showAlert = () => {
     setTimeout(() => {
       setAlertMessage(false)
-      console.log('Alert')
     }, 2000);
     
   }
@@ -47,12 +46,12 @@ export default function Login() {
     //createUser(values)
     queryUser(values).then(user => {
       if (user) { //user é um valor boleano.
-        console.log(user + 'Usuario encontrado.')
         const stack = stackLabel.operadorName = values.login
+        alert(user)
         setStackLabel(stackLabel)
         router.push('/pages/home')
       } else {
-        console.log(user + 'Usuario não encontrado.')
+        alert(user)
         setAlertMessage(true)
         showAlert()
       }
@@ -94,13 +93,13 @@ export default function Login() {
                 <FormControl>
                   <Input type='password' placeholder="Senha" className="senha" {...field} />
                 </FormControl>
-                <FormDescription>
-                </FormDescription>
+                <FormDescription></FormDescription>
                 <FormMessage />
               </FormItem>
             )}
           />
           <Button type="submit" className="w-full">Entrar</Button>
+          <Link href={'/pages/home/cadastro/users'}><span>Cadastre-se.</span></Link>
         </form>
         { alertMessage &&
           <Alert className='w-96'>
