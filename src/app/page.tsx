@@ -21,6 +21,8 @@ const formSchema = z.object({
     message: "É nescessario inserir a senha",
   }),
 })
+//<Link href={'/pages/home/cadastro/users'}><span>Cadastre-se.</span></Link>
+
 
 export default function Login() {
   const router = useRouter()
@@ -47,11 +49,9 @@ export default function Login() {
     queryUser(values).then(user => {
       if (user) { //user é um valor boleano.
         const stack = stackLabel.operadorName = values.login
-        alert(user)
         setStackLabel(stackLabel)
         router.push('/pages/home')
       } else {
-        alert(user)
         setAlertMessage(true)
         showAlert()
       }
@@ -99,7 +99,6 @@ export default function Login() {
             )}
           />
           <Button type="submit" className="w-full">Entrar</Button>
-          <Link href={'/pages/home/cadastro/users'}><span>Cadastre-se.</span></Link>
         </form>
         { alertMessage &&
           <Alert className='w-96'>
