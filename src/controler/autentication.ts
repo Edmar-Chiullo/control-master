@@ -14,7 +14,8 @@ function connectDb() {
     // Signed in 
     const user = userCredential.user;
     // ...
-    console.log(`${user.email} logado com sussesso!`)
+    //console.log(`${user.email} logado com sussesso!`)
+    return user.email
   })
   .catch((error) => {
     const errorCode = error.code;

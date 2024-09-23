@@ -1,8 +1,6 @@
 "use client"
 
 import { useStackLabelContext } from "@/app/context/userContext"
-import queryUser from '@/controler/sqlite-controler/query-user';
-import Link from 'next/link';
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
@@ -12,17 +10,18 @@ import { useForm } from "react-hook-form"
 import { useRouter } from "next/navigation";
 import { useState } from 'react';
 import { z } from "zod"
+import { createUser, getUser } from "@/controler/users";
+import connectDb from "@/controler/autentication"
 
 const formSchema = z.object({
   login: z.string().min(2, {
     message: "É nescessario inserir o login",
   }),
-  senha: z.string().min(2, {
+  password: z.string().min(2, {
     message: "É nescessario inserir a senha",
   }),
 })
 //<Link href={'/pages/home/cadastro/users'}><span>Cadastre-se.</span></Link>
-
 
 export default function Login() {
   const router = useRouter()
@@ -33,7 +32,7 @@ export default function Login() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       login: "",
-      senha: ""
+      password: ""
     },
   })
 
@@ -45,21 +44,22 @@ export default function Login() {
   }
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    //createUser(values)
-    queryUser(values).then(user => {
-      if (user) { //user é um valor boleano.
+    const user = getUser(values)
+    
+    user.then((element) => {
+      if (element) { //user é um valor boleano.
         const stack = stackLabel.operadorName = values.login
         setStackLabel(stackLabel)
         router.push('/pages/home')
       } else {
         setAlertMessage(true)
         showAlert()
-      }
+      }        
     })
-    
+    //createUser(values)
     form.reset({
       login: '',  
-      senha: ''
+      password: ''
     })
 
   }
@@ -86,7 +86,7 @@ export default function Login() {
           />
           <FormField
             control={form.control}
-            name="senha"
+            name="password"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Senha</FormLabel>
@@ -112,25 +112,3 @@ export default function Login() {
     </div>  
   );
 }
-
-
-// import * as functions from 'firebase-functions';
-// import next from 'next';
-// import { Request, Response } from 'firebase-functions';
-
-// const app = next({
-//   dev: false, // true se estiver em ambiente de desenvolvimento
-//   conf: { distDir: '.next' }
-// });
-
-// const handle = app.getRequestHandler();
-
-// export const nextApp = functions.https.onRequest((req: Request, res: Response) => {
-//   return app.prepare().then(() => handle(req, res));
-// });]
-
-// "esModuleInterop": true,
-// //     "skipLibCheck": true,
-// "next": "latest",
-//     "react": "^18.0.0",
-//     "react-dom": "^18.0.0"
